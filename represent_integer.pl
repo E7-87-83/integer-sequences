@@ -46,7 +46,7 @@ sub last_digit {
     return 0;
 }
 
-for (my $_b = 3; $_b <= $B_MAX; $_b++) {
+for (my $_b = 2; $_b <= $B_MAX; $_b++) {
     for (my $m = 1; $m < $_b; $m++) {
         my $a = 0;
         for (my $i = 1; $i < $m*$_b; $i++) {
