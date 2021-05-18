@@ -89,7 +89,6 @@ for (my $_b = 2; $_b <= $B_MAX; $_b++) {
 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266, 280, 294, 308, 322, 336, 350, 364, 378, 392, 406, 
 29, 29, 29, 51, 29, 29, 116, 95, 78, 29, 174, 56, 203, 161, 29, 183, 261, 83, 290, 57, 176, 249, 348, 110, 135, 293, 225, 315, 435, 
 
-
 Read as a triangle  --> t(row num, col num) 
 
 It seems that t(x-1, y) = (x-1)*(y+1)/2 if x,y is coprime, x > y >= 1.
@@ -99,7 +98,8 @@ t(r, p) = r if p|r+1, else t(r, p) = (p+1)/2 * r;
 and also a general formula for the (p-1)-th row:
 t(p-1, q) = (p-1)*(q+1)/2.
 
-
+The first column is the sequence of positive integers in order (A000027).
+The second column is A080512.
 The last terms in each row are the triangular numbers. (A000217)
 The second-last terms of each even row are A001105. ( a(n) = 2*n^2.  )  Since n is always coprime with n-2 for odd n.)
 The third-last terms of the (3n+1)-th rows are  3, 15, 36, 66, 105, 153     ( A062741 3 times pentagonal numbers)
