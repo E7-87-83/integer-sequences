@@ -36,6 +36,11 @@ for my $n (2..$UPPER) {
     printf "%3d %3d\n", $n, $c ;
 }
 
+# a(new peak = 8) > 20000
+# a(new peak = n):
+# 1  2  3  4  5  6  7  
+# 2, 3, 4, 9,30,81, 4096
+
 =pod
   2   1
   3   2
