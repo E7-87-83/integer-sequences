@@ -8,6 +8,11 @@ use v5.10;
 
 # 3 <= a(n) <= n-2 for n > 4
 
+# Question:
+# I. For a positive integer s > 2, does it exists 
+# positive integer m such that a(n) > s for all n > m?
+#II. For any positive integer s > 2, does it always exists
+# a positive integer m such that a(m) = s ?
 
 my $UPPER = $ARGV[0] || 20;
 
