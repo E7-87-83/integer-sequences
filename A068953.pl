@@ -37,9 +37,21 @@ for my $n (2..$UPPER) {
 }
 
 # a(new peak = 8) > 20000
+
 # a(new peak = n):
 # 1  2  3  4  5  6  7  
-# 2, 3, 4, 9,30,81, 4096
+# 2, 3, 4, 9,30,81, 4096 
+# A059972:
+# 2, 3, 4, 9, 30, 81, 4096, 531441, 16777216 
+#Is every term except 30 a power of either 2 or 3? 
+
+=pod
+All such bases are divisors of n or n-1, 
+since the lowest base-B digit of n is 0 iff B | n, 1 iff B | n-1. 
+- Robert Israel, Jul 04 2018 
+
+(PARI) a(n) = sum(b=2, n, #select(x->(x>1), digits(n, b)) == 0); \\ Michel Marcus, Jul 04 2018 
+=cut
 
 =pod
   2   1
