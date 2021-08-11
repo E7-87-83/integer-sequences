@@ -22,3 +22,9 @@ sub sooo {
     return;
 
 }
+
+# A New Conjecture: If no zeros is allowed, the sequence is finite.
+# Another conjecture: are all very large terms one of the form 
+# d*10^n + d , where d goes from 1 to 9? i.e.
+# 10...01, 20...02, 30...03, 40...04, 
+# 50...05, 60...06, 70...07, 80..08, 90..09 ?
