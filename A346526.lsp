@@ -1,5 +1,3 @@
-; "Conjecture: Lim_{n->infinity} a(n)/a(n-1) = 1. "
-
 (setf candidates (list 25))
 (setf result nil)
 
