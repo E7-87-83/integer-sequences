@@ -1,3 +1,6 @@
+# Conjecture: A349294 is finite.
+# Note on the program: not fast enough
+
 use v5.12.0;
 use warnings;
 use List::Util qw/first any shuffle/;
