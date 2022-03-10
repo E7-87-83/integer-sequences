@@ -16,6 +16,13 @@
 #  97 * (1, 5)
 # 191 * (1, 5)
 
+=pod
+https://oeis.org/A271953  a(n) is the period of Narayana's cows sequence modulo n
+Let the prime factorization of n be p1^e1*...*pk^ek. Then a(n) = lcm(a(p1^e1), ..., a(pk^ek)) [Engstrom]
+
+https://www.ams.org/journals/tran/1931-033-01/S0002-9947-1931-1501585-5/
+On sequences defined by linear recurrence relations, H. T. Engstrom, 1931
+=cut
 
 
 for my $i (2..1000) {
