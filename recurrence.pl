@@ -25,6 +25,11 @@ On sequences defined by linear recurrence relations, H. T. Engstrom, 1931
 =cut
 
 
+
+use v5.22.0;
+use warnings;
+use List::Util qw/any sum/;
+
 for my $i (2..1000) {
     if (
         scalar @{pisano_period($i, 3, [1,1,1], [0,0,1])}  # Tribonacci numbers  #OEIS:A000073
