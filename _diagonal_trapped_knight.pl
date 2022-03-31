@@ -35,9 +35,9 @@ or
 
 
 
-similar to A316588
-
 https://oeis.org/wiki/Knight_tours
+what about knight in 3D? what about 3x1, 4x1 knight?
+
 https://scipython.com/blog/the-trapped-knight
 
 =cut
