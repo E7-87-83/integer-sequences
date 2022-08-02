@@ -86,10 +86,10 @@ use Data::Dump qw/pp/;
         $board = add_lding_zero($board);
         my @arr = split "", $board;
         for my $p (0..$#arr) {
-            if ($arr[$p] == 0 && (
-                       substr($board,$p) =~ /^0$alt_player+$player/ 
-                    || substr($board,0,$p+1) =~ /$player$alt_player+0$/ )) {
-                push $kids->@*, make_move($board, $player, $p);
+            my $left =  substr($board,0,$p+1) =~ /$player$alt_player+0$/; 
+            my $right = substr($board,$p) =~ /^0$alt_player+$player/  ;
+            if ($arr[$p] == 0 && ($left || $right)) {
+                push $kids->@*, make_move($board, $player, $p, $left, $right);
             }
         }
         $kids = [ map {remove_lding_zero($_)} $kids->@* ];
@@ -113,8 +113,8 @@ use Data::Dump qw/pp/;
         my $alt_player = $_[1] == 1 ? 2 : 1;
         my $pos = $_[2];
         my @arr = split "", $board;
-        my $left = $pos <= 1 ? 0 : 1;
-        my $right = $pos >= $#arr-1 ? 0 : 1;
+        my $left = $_[3];
+        my $right = $_[4];
         if ($left) {
             my $i = index( $board, $alt_player, $pos-1 );
             my $j = index( $board, $player);
@@ -249,8 +249,7 @@ sub base3 {
 =cut
 
 
-
-for my $i (1..300_000) {
+for my $i (1..300000) {
     my $o = Node->new(base3($i), [], $ARGV[0] || 1);
     $o->depth_first;
     $o->df_winner;
