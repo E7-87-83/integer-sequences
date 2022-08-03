@@ -119,15 +119,12 @@ use Data::Dump qw/pp/;
             my $lbd = length $board;
             my $rboard = scalar reverse $board;
             my $rpos = $lbd - $pos - 1;
-            my $i = $lbd - index($rboard, $alt_player, $rpos+1) - 1;
             my $j = $lbd - index($rboard, $player, $rpos+2 ) - 1;
-
-            $arr[$_] = $player for ($j+1 .. $i+1);
+            $arr[$_] = $player for ($j+1 .. $pos);
         }
         if ($right) {
-            my $i = index($board, $alt_player, $pos+1 );
             my $j = index($board, $player, $pos+2 );
-            $arr[$_] = $player for ($i-1 .. $j-1);
+            $arr[$_] = $player for ($pos .. $j-1);
         }
         $board = join "", @arr;
         return $board;
